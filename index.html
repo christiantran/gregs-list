@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <title>GregsList</title>
+</head>
+<body>
+    <section>
+      <h1>Welcome to Gregslist</h1>
+    </section>
+    <section>
+      <form onsubmit="app.controllers.carController.addCar(event)">
+        <input type="text" name="make" placeholder="make">
+        <input type="text" name="model" placeholder="model">
+        <input type="number" name="year" placeholder="year">
+        <input type="number" name="price" placeholder="price">
+        <input type="url" name="img" placeholder="Image">
+        <button type="submit">SUBMIT</button>
+      </form>
+    </section>
+    <section id="cars">
+      <!-- <div>
+        <img src="//placehold.it/100x100" alt="">
+        <h3>Make: </h3>
+        <h3>Model: </h3>
+        <h3>Year: </h3>
+        <h3>Price: </h3>
+      </div> -->
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- SERVICES -->
+    <script src="app/CarService.js"></script>
+    <script src="app/houseService.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="app/CarController.js"></script>
+    <script src="app/houseController.js"></script>
+
+    <!-- INITIALIZE APP -->
+    <script src="app/app.js"></script>
+</body>
+</html>
