@@ -11,6 +11,7 @@
     <section>
       <h1>Welcome to Gregslist</h1>
     </section>
+    
     <section>
       <form onsubmit="app.controllers.carController.addCar(event)">
         <input type="text" name="make" placeholder="make">
@@ -30,6 +31,28 @@
         <h3>Price: </h3>
       </div> -->
     </section>
+
+    <section>
+        <form onsubmit="app.controllers.houseController.addHouse(event)">
+          <input type="text" name="bedrooms" placeholder="bedrooms">
+          <input type="text" name="bathrooms" placeholder="bathrooms">
+          <input type="number" name="levels" placeholder="levels">
+          <input type="number" name="year" placeholder="year">
+          <input type="number" name="price" placeholder="price">
+          <input type="url" name="img" placeholder="Image">
+          <button type="submit">SUBMIT</button>
+        </form>
+      </section>
+      <section id="houses">
+        <!-- <div>
+          <img src="//placehold.it/100x100" alt="">
+          <h3>Bedrooms: </h3>
+          <h3>Bathrooms: </h3>
+          <h3>Levels: </h3>
+          <h3>Year: </h3>
+          <h3>Price: </h3>
+        </div> -->
+      </section>
 
 
 
