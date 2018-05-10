@@ -11,17 +11,21 @@ function drawHouses(houses){
     for (let i = 0; i < houses.length; i++) {
       const house = houses[i];
       template += `
-      <div>
-        <img src="${house.imgUrl}" alt="">
-        <h3>Bedrooms: ${house.bedrooms}</h3>
-        <h3>Bathrooms: ${house.bathrooms}</h3>
-        <h3>Levels: ${house.levels}</h3>
-        <h3>Year: ${house.year}</h3>
-        <h3>Price: ${house.price}</h3>
-        <p>Description: ${house.description}</p>
-        <button onclick="app.controllers.houseController.deleteHouse('${house._id}')">Delete</button>
+      <div class="card mt-4 mb-4" style="width: 30rem;">
+        <img class="card-img-top" src="${house.imgUrl}" alt="Card image cap">
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">Bedrooms: ${house.bedrooms}</li>
+        <li class="list-group-item">Bathrooms: ${house.bathrooms}</li>
+        <li class="list-group-item">Levels: ${house.levels}</li>
+        <li class="list-group-item">Year: ${house.year}</li>
+        <li class="list-group-item">Price: ${house.price}</li>
+        </ul>
+        <div class="card-body">
+        <p class="card-text">Description: ${house.description}</p>
+        <button class="btn btn-danger" onclick="app.controllers.houseController.deleteHouse('${house._id}')">Delete</button>
       </div>
-    ` 
+      </div>
+    `
     }
     document.getElementById('houses').innerHTML = template
   }

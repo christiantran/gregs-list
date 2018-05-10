@@ -11,15 +11,18 @@ function CarController(){
         for (let i = 0; i < cars.length; i++) {
           const car = cars[i];
           template += `
-          <div>
-            <img src="${car.imgUrl}" alt="">
-            <h3>Make: ${car.make}</h3>
-            <h3>Model: ${car.model}</h3>
-            <h3>Year: ${car.year}</h3>
-            <h3>Price: ${car.price}</h3>
-            <button onclick="app.controllers.carController.discountCar('${car._id}',${car.price})">Discount</button>
-            <p>Description: ${car.description}</p>
-            <button onclick="app.controllers.carController.deleteCar('${car._id}')">Delete</button>
+          <div class="card mt-4 mb-4" style="width:30rem;">
+            <img class="card-img-top" src="${car.imgUrl}" alt="Card image cap">
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Make: ${car.make}</li>
+            <li class="list-group-item">Model: ${car.model}</li>
+            <li class="list-group-item">Year: ${car.year}</li>
+            <li class="list-group-item">Price: ${car.price} <button class="btn btn-success" onclick="app.controllers.carController.discountCar('${car._id}',${car.price})">Discount</button></li>
+            </ul>
+            <div class="card-body">
+            <p class="card-text">Description: ${car.description}</p>
+            <button class="btn btn-danger" onclick="app.controllers.carController.deleteCar('${car._id}')">Delete</button>
+          </div>
           </div>
         ` 
         }

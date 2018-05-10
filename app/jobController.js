@@ -8,14 +8,18 @@ function drawJobs(jobs){
     for (let i = 0; i < jobs.length; i++) {
       const job = jobs[i];
       template += `
-      <div>
-        <h3>Company: ${job.company}</h3>
-        <h3>Job Title: ${job.jobTitle}</h3>
-        <h3>Hours: ${job.hours}</h3>
-        <h3>Rate: ${job.rate}</h3>
-        <h3>Price: ${job.price}</h3>
-        <p>Description: ${job.description}</p>
-        <button onclick="app.controllers.jobController.deleteJob('${job._id}')">Delete</button>
+      <div class="card mb-4 mt-4" style="width: 30rem;">
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item">Company: ${job.company}</li>
+      <li class="list-group-item">Job Title: ${job.jobTitle}</li>
+      <li class="list-group-item">Hours: ${job.hours}</li>
+      <li class="list-group-item">Rate: ${job.rate}</li>
+      <li class="list-group-item">Price: ${job.price}</li>
+      </ul>
+      <div class="card-body">
+        <p class="card-text">Description: ${job.description}</p>
+        <button class="btn btn-danger" onclick="app.controllers.jobController.deleteJob('${job._id}')">Delete</button>
+      </div>
       </div>
     ` 
     }
