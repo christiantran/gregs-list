@@ -13,11 +13,13 @@
     </section>
     
     <section>
+        <h1>Cars</h1>
       <form onsubmit="app.controllers.carController.addCar(event)">
         <input type="text" name="make" placeholder="make">
         <input type="text" name="model" placeholder="model">
         <input type="number" name="year" placeholder="year">
         <input type="number" name="price" placeholder="price">
+        <input type="text" name="description" placeholder="description">
         <input type="url" name="img" placeholder="Image">
         <button type="submit">SUBMIT</button>
       </form>
@@ -33,12 +35,14 @@
     </section>
 
     <section>
+        <h1>Houses</h1>
         <form onsubmit="app.controllers.houseController.addHouse(event)">
           <input type="text" name="bedrooms" placeholder="bedrooms">
           <input type="text" name="bathrooms" placeholder="bathrooms">
           <input type="number" name="levels" placeholder="levels">
           <input type="number" name="year" placeholder="year">
           <input type="number" name="price" placeholder="price">
+          <input type="text" name="description" placeholder="description">
           <input type="url" name="img" placeholder="Image">
           <button type="submit">SUBMIT</button>
         </form>
@@ -53,19 +57,37 @@
           <h3>Price: </h3>
         </div> -->
       </section>
-
-
+      
+      <section>
+          <h1>Jobs</h1>
+        <form onsubmit="app.controllers.jobController.addJob(event)">
+          <input type="text" name="company" placeholder="company">
+          <input type="text" name="jobTitle" placeholder="job title">
+          <input type="number" name="hours" placeholder="hours">
+          <input type="number" name="rate" placeholder="rate">
+          <input type="text" name="description" placeholder="description">
+          <button type="submit">SUBMIT</button>
+        </form>
+      </section>
+      <section id="jobs">
+        <!-- <div>
+          <h3>Company: </h3>
+          <h3>Job Title: </h3>
+          <h3>Hours: </h3>
+          <h3>Rate: </h3>
+        </div> -->
+      </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- SERVICES -->
     <script src="app/CarService.js"></script>
     <script src="app/houseService.js"></script>
-
+    <script src="app/jobService.js"></script>
     <!-- CONTROLLERS -->
     <script src="app/CarController.js"></script>
     <script src="app/houseController.js"></script>
-
+    <script src="app/jobController.js"></script>
     <!-- INITIALIZE APP -->
     <script src="app/app.js"></script>
 </body>

@@ -19,7 +19,7 @@ function drawHouses(houses){
         <h3>Year: ${house.year}</h3>
         <h3>Price: ${house.price}</h3>
         <p>Description: ${house.description}</p>
-        <button onclick="app.controllers.houseController.deleteHouse(${house._id})">Delete</button>
+        <button onclick="app.controllers.houseController.deleteHouse('${house._id}')">Delete</button>
       </div>
     ` 
     }
